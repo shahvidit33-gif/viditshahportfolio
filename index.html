@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Vidit Shah: CSE student, gamer, music creator and table tennis champion.">
+<title>Vidit Shah | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f7ff;--bg2:#e2eeff;--tx:#08193a;--mut:#46597f;--ln:rgba(8,25,58,.16);--ac:#1d5cff;--on-ac:#fff;--m1:#d3e4ff;--m2:#b0cdff;--t1:#4a82ea;--t2:#1f4fb5;--snow:#fff;--flake:#5f98ff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#06122b;--bg2:#0a1c40;--tx:#eaf3ff;--mut:#9db3d9;--ln:rgba(234,243,255,.2);--ac:#5b8cff;--on-ac:#06122b;--m1:#102758;--m2:#18367a;--t1:#1f4ca3;--t2:#12306f;--flake:#fff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#06122b;--bg2:#0a1c40;--tx:#eaf3ff;--mut:#9db3d9;--ln:rgba(234,243,255,.2);--ac:#5b8cff;--on-ac:#06122b;--m1:#102758;--m2:#18367a;--t1:#1f4ca3;--t2:#12306f;--flake:#fff;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 18px/1.6 'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.035em;line-height:.95}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+#snow{position:fixed;inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:15;background:var(--bg);border-bottom:1px solid var(--ln);padding-top:env(safe-area-inset-top,0px);transition:background .4s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+nav b{font-weight:800;font-size:20px;letter-spacing:-.03em;white-space:nowrap}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav li a{display:block;text-decoration:none;font-size:15px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:background .25s,color .25s}
+nav li a:hover{background:var(--bg2)}
+nav li a.on{background:var(--tx);color:var(--bg)}
+.tg{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--tx);background:transparent;color:var(--tx);cursor:pointer;display:grid;place-items:center;flex:none}
+.tg svg{width:20px;height:20px}
+.tg:hover{background:var(--tx);color:var(--bg)}
+#prog{position:fixed;left:0;top:calc(64px + env(safe-area-inset-top,0px));height:3px;width:100%;background:var(--ac);transform:scaleX(0);transform-origin:0 50%;z-index:16}
+@media(max-width:620px){nav b{display:none}nav .wrap{gap:10px}}
+.hero{position:relative;min-height:max(100svh,720px);padding:calc(120px + env(safe-area-inset-top,0px)) 0 max(24vw,230px);overflow:hidden;background:linear-gradient(var(--bg),var(--bg2))}
+.hero .wrap{position:relative;z-index:3}
+.hero h1{font-size:clamp(68px,14vw,200px);margin-left:-.04em}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.12s}
+@keyframes up{to{transform:none}}
+.role{margin-top:26px;font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em}
+.role em{font-style:normal;display:inline-block;color:var(--ac)}
+.role em.sw{animation:sw .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes sw{from{transform:translateY(60%);opacity:0}}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;border:2px solid var(--tx);font:inherit;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer;background:transparent;color:var(--tx);transition:background .25s,color .25s,border-color .25s}
+.btn.p{background:var(--ac);border-color:var(--ac);color:var(--on-ac)}
+.btn:hover{background:var(--tx);border-color:var(--tx);color:var(--bg)}
+.scenery{position:absolute;left:0;right:0;bottom:0;height:max(31vw,285px);z-index:2;pointer-events:none;overflow:hidden}
+.scenery svg{position:absolute;bottom:0;left:50%;width:max(108%,960px);aspect-ratio:10/3;height:auto;transform:translateX(calc(-50% + var(--px,0px)));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.scenery use{color:var(--t1)}
+.scenery .fr use{color:var(--t2)}
+section{padding:clamp(70px,11vw,140px) 0;border-top:1px solid var(--ln)}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(40px,7vw,88px);margin-bottom:clamp(30px,5vw,56px)}
+.lead{font-size:clamp(26px,4.2vw,50px);font-weight:600;letter-spacing:-.03em;line-height:1.12;max-width:22em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:56px;border-top:2px solid var(--tx);padding-top:24px}
+.facts dt{color:var(--mut);font-size:15px}
+.facts dd{margin:4px 0 0;font-weight:600;font-size:20px;letter-spacing:-.01em}
+.row{display:grid;grid-template-columns:minmax(110px,.6fr) 2fr;gap:30px;align-items:baseline;padding:30px 20px;margin:0 -20px;border-top:1px solid var(--ln);transition:background .3s,color .3s}
+.row:last-child{border-bottom:1px solid var(--ln)}
+.row:hover{background:var(--tx);color:var(--bg)}
+.row:hover p{color:var(--bg);opacity:.8}
+.row .n{font-size:clamp(64px,10vw,130px);font-weight:800;letter-spacing:-.05em;line-height:.9;color:var(--ac)}
+.row:hover .n{color:var(--bg)}
+.row h3{font-size:clamp(26px,3.6vw,42px);margin-bottom:8px}
+.row p{color:var(--mut);max-width:34em}
+@media(max-width:640px){.row{grid-template-columns:1fr;gap:6px}}
+.proj{display:block;text-decoration:none;perspective:1200px}
+.pc{display:grid;grid-template-columns:1.1fr 1fr;border:2px solid var(--tx);background:var(--bg);transform-style:preserve-3d;transition:transform .25s ease-out,box-shadow .25s}
+.pc:hover{box-shadow:14px 14px 0 var(--ac)}
+.pv{background:var(--ac);color:var(--on-ac);min-height:280px;display:grid;place-items:center;font-weight:800;font-size:clamp(40px,7vw,84px);letter-spacing:-.05em;line-height:.9;padding:30px}
+.pt{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.pt h3{font-size:clamp(30px,4vw,48px);margin-bottom:14px}
+.pt p{color:var(--mut)}
+.go{align-self:flex-start;padding:12px 24px;border-radius:999px;background:var(--tx);color:var(--bg);font-weight:600;font-size:16px}
+.soon{margin-top:26px;color:var(--mut)}
+@media(max-width:760px){.pc{grid-template-columns:1fr}.pv{min-height:200px}}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.col{padding:6px 30px 20px;border-left:3px solid var(--ac)}
+.col h3{font-size:clamp(34px,4.4vw,54px);margin-bottom:12px}
+.col p{color:var(--mut)}
+.now{margin-top:70px}
+.now h3{font-size:28px;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{padding:9px 20px;border-radius:999px;border:1.5px solid var(--tx);font-weight:600;font-size:16px}
+.tags span.on{background:var(--tx);color:var(--bg)}
+.mail{display:block;font-size:clamp(28px,7.2vw,96px);font-weight:800;letter-spacing:-.045em;line-height:1;text-decoration:none;overflow-wrap:anywhere;margin:6px 0 40px;transition:color .25s}
+.mail:hover{color:var(--ac)}
+#contact{padding-bottom:0;position:relative}
+#contact .wrap{padding-bottom:40px}
+.edgew{position:relative;height:max(17vw,120px);overflow:hidden}
+.edge{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max(104%,720px);aspect-ratio:5/1;height:auto;color:var(--t1)}
+footer{background:var(--t2);color:#eaf3ff;padding:22px 0 calc(28px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1 span i{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="pine" viewBox="0 0 100 160"><rect x="45" y="136" width="10" height="24" fill="currentColor"/><polygon points="50,62 10,138 90,138" fill="currentColor"/><polygon points="50,32 16,98 84,98" fill="currentColor"/><polygon points="50,2 22,62 78,62" fill="currentColor"/><polygon points="50,2 36,29 43,26 50,33 57,26 64,29" style="fill:var(--snow)"/><polygon points="50,32 31,68 41,64 50,73 59,64 69,68" style="fill:var(--snow)"/><polygon points="50,62 25,108 38,103 50,114 62,103 75,108" style="fill:var(--snow)"/></symbol>
+<symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></symbol>
+</defs></svg>
+
+<canvas id="snow" aria-hidden="true"></canvas>
+<nav>
+  <div class="wrap">
+    <b>Vidit Shah</b>
+    <ul id="links"><li><a href="#home" class="on">Home</a></li><li><a href="#about">About</a></li><li><a href="#achievements">Wins</a></li><li><a href="#projects">Project</a></li><li><a href="#interests">Interests</a></li><li><a href="#contact">Contact</a></li></ul>
+    <button class="tg" id="tg" aria-label="Switch between light and dark theme" title="Switch theme (T)"><svg aria-hidden="true"><use href="#sun"/></svg></button>
+  </div>
+</nav>
+<div id="prog"></div>
+
+<main>
+<header class="hero" id="home">
+  <div class="wrap">
+    <h1><span><i>Vidit</i></span><span><i>Shah.</i></span></h1>
+    <p class="role">I’m a <em id="role">CSE student</em></p>
+    <div class="btns"><a class="btn p" href="#projects">See my project</a><a class="btn" href="#contact">Get in touch</a></div>
+  </div>
+  <div class="scenery" id="scenery" aria-hidden="true">
+    <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" data-d="6"><path d="M0 300V170L110 80L190 150L330 30L470 160L590 90L710 170L840 50L1000 160V300Z" style="fill:var(--m1)"/><path d="M330 30L298 72L320 66L336 86L352 64L374 70ZM840 50L810 88L830 82L846 102L862 80L880 88ZM110 80L88 110L108 105L118 120L134 104Z" style="fill:var(--snow)"/></svg>
+    <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" data-d="12"><path d="M0 300V220L160 150L300 220L450 170L620 230L790 175L1000 235V300Z" style="fill:var(--m2)"/></svg>
+    <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" data-d="20"><use href="#pine" x="20" y="150" width="60" height="96"/><use href="#pine" x="130" y="130" width="70" height="112"/><use href="#pine" x="240" y="160" width="55" height="88"/><use href="#pine" x="540" y="165" width="55" height="88"/><use href="#pine" x="650" y="135" width="70" height="112"/><use href="#pine" x="780" y="155" width="60" height="96"/><use href="#pine" x="910" y="140" width="68" height="108"/></svg>
+    <svg class="fr" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" data-d="34"><use href="#pine" x="-30" y="60" width="130" height="208"/><use href="#pine" x="90" y="150" width="80" height="128"/><use href="#pine" x="190" y="90" width="110" height="176"/><use href="#pine" x="320" y="170" width="65" height="104"/><use href="#pine" x="610" y="175" width="65" height="104"/><use href="#pine" x="700" y="85" width="115" height="184"/><use href="#pine" x="830" y="160" width="75" height="120"/><use href="#pine" x="900" y="50" width="140" height="224"/><path d="M-10 300V272Q150 258 300 270T600 268T850 270T1010 262V300Z" style="fill:var(--snow)"/></svg>
+  </div>
+</header>
+
+<section id="about" class="alt">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="lead">I’m a first-year computer science student who builds things, plays games to see how they work, makes music, and wins at table tennis.</p>
+    <dl class="facts">
+      <div><dt>Studying</dt><dd>B.Tech, Computer Science &amp; Engineering</dd></div>
+      <div><dt>Year</dt><dd>1st year, semester 1</dd></div>
+      <div><dt>First build</dt><dd>Smart India Hackathon project</dd></div>
+      <div><dt>Off screen</dt><dd>Competitive table tennis</dd></div>
+      <div><dt>Strengths</dt><dd>Teamwork, discipline, quick learning, problem solving</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <h2>Achievements</h2>
+    <div class="row"><div class="n">5x</div><div><h3>Interschool champion</h3><p>Five-time winner of interschool table tennis tournaments.</p></div></div>
+    <div class="row"><div class="n">2x</div><div><h3>District-level player</h3><p>Represented my district twice in table tennis.</p></div></div>
+    <div class="row"><div class="n">1</div><div><h3>Smart India Hackathon</h3><p>Took part and built a working web project with my team.</p></div></div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <a class="proj" id="proj" href="https://newweb-r2jx.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <div class="pc" id="pc">
+        <div class="pv">SIH<br>project</div>
+        <div class="pt"><div><h3>Smart India Hackathon web project</h3><p>A website my team built for the Smart India Hackathon, live on the web.</p></div><span class="go">Open live site</span></div>
+      </div>
+    </a>
+    <p class="soon">More games, code and music projects are on the way.</p>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="wrap">
+    <h2>Interests</h2>
+    <div class="cols">
+      <div class="col"><h3>Gaming</h3><p>Exploring game worlds and how they’re built.</p></div>
+      <div class="col"><h3>Programming</h3><p>Learning by building, one project at a time.</p></div>
+      <div class="col"><h3>Music</h3><p>Making beats and melodies.</p></div>
+    </div>
+    <div class="now">
+      <h3>Learning right now</h3>
+      <div class="tags"><span class="on">Programming fundamentals</span><span class="on">Game creation</span><span class="on">Music production</span><span>Web development</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lead" style="margin-bottom:26px">Want to collaborate or just say hi? Send an email.</p>
+    <a class="mail" href="mailto:shahvidit33@gmail.com">shahvidit33@gmail.com</a>
+    <div class="btns" style="margin-top:0"><a class="btn p" href="mailto:shahvidit33@gmail.com">Send a message</a><button class="btn" id="cp" type="button">Copy email</button></div>
+  </div>
+  <div class="edgew"><svg class="edge" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><use href="#pine" x="20" y="60" width="80" height="128"/><use href="#pine" x="120" y="100" width="60" height="96"/><use href="#pine" x="260" y="40" width="100" height="160"/><use href="#pine" x="400" y="105" width="55" height="88"/><use href="#pine" x="560" y="90" width="65" height="104"/><use href="#pine" x="700" y="30" width="110" height="176"/><use href="#pine" x="850" y="100" width="60" height="96"/><use href="#pine" x="920" y="55" width="85" height="136"/></svg></div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Vidit Shah</span><a href="#home">Back to top</a></div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function flip(){var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;root.dataset.theme=dark?'light':'dark';fc()}
+  document.getElementById('tg').onclick=flip;
+  addEventListener('keydown',function(e){if((e.key==='t'||e.key==='T')&&!e.metaKey&&!e.ctrlKey&&!e.altKey)flip()});
+  var pg=document.getElementById('prog');
+  function sp(){var h=root.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')'}
+  addEventListener('scroll',sp,{passive:true});sp();
+  var links=[].slice.call(document.querySelectorAll('#links a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=secs.indexOf(e.target);links.forEach(function(a,k){a.classList.toggle('on',k===i)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){io.observe(s)});
+  var R=['CSE student','developer in training','gamer','music creator','table tennis champion'],ri=0,re=document.getElementById('role');
+  setInterval(function(){ri=(ri+1)%R.length;re.textContent=R[ri];re.classList.remove('sw');void re.offsetWidth;re.classList.add('sw')},2400);
+  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  // parallax forest
+  var layers=[].slice.call(document.querySelectorAll('.scenery svg'));
+  if(!still)addEventListener('pointermove',function(e){var p=e.clientX/innerWidth-.5;layers.forEach(function(s){s.style.setProperty('--px',(-p*s.dataset.d)+'px')})});
+  // project tilt
+  var pr=document.getElementById('proj'),pc=document.getElementById('pc');
+  if(matchMedia('(hover:hover)').matches&&!still){
+    pr.addEventListener('pointermove',function(e){var r=pr.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;pc.style.transform='rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg)'});
+    pr.addEventListener('pointerleave',function(){pc.style.transform=''});
+  }
+  var cp=document.getElementById('cp');
+  cp.onclick=function(){
+    function ok(){cp.textContent='Copied';setTimeout(function(){cp.textContent='Copy email'},2000)}
+    try{navigator.clipboard.writeText('shahvidit33@gmail.com').then(ok,function(){location.href='mailto:shahvidit33@gmail.com'})}
+    catch(e){location.href='mailto:shahvidit33@gmail.com'}
+  };
+  // snow: pre-rendered crystal sprites (dendrite, plate, star) that tumble as they fall
+  var c=document.getElementById('snow'),x=c.getContext('2d'),W,H,col='#fff',spr=[],fl=[];
+  function mkSprite(t){var s=document.createElement('canvas');s.width=s.height=128;var g=s.getContext('2d');g.translate(64,64);g.strokeStyle=g.fillStyle=col;g.lineCap=g.lineJoin='round';g.lineWidth=4;
+    for(var a=0;a<6;a++){g.save();g.rotate(a*Math.PI/3);g.beginPath();
+      if(t===0){g.moveTo(0,0);g.lineTo(0,-58);[[20,15],[34,12],[46,8]].forEach(function(b){g.moveTo(0,-b[0]);g.lineTo(b[1]*.8,-b[0]-b[1]*.8);g.moveTo(0,-b[0]);g.lineTo(-b[1]*.8,-b[0]-b[1]*.8)})}
+      else if(t===1){g.moveTo(0,-8);g.lineTo(0,-52);g.moveTo(-8,-52);g.lineTo(0,-60);g.lineTo(8,-52)}
+      else{g.moveTo(0,0);g.lineTo(0,-30);g.moveTo(0,-30);g.lineTo(9,-42);g.lineTo(0,-58);g.lineTo(-9,-42);g.closePath()}
+      g.stroke();g.restore()}
+    if(t===1){g.lineWidth=3.5;g.beginPath();for(var i=0;i<6;i++){var q=i*Math.PI/3;g[i?'lineTo':'moveTo'](Math.sin(q)*24,-Math.cos(q)*24)}g.closePath();g.stroke()}
+    if(t===2){g.beginPath();g.arc(0,0,5,0,6.3);g.fill()}
+    return s}
+  function fc(){col=getComputedStyle(root).getPropertyValue('--flake').trim()||'#fff';spr=[0,1,2].map(mkSprite)}
+  function rs(){var d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+  rs();fc();addEventListener('resize',rs);
+  function mk(top){var z=Math.random();return{x:Math.random()*W,y:top?-40:Math.random()*H,z:z,s:12+z*34,dot:z<.22,t:Math.floor(Math.random()*3),vy:.3+z*.8,ph:Math.random()*6,rot:Math.random()*6,vr:(Math.random()-.5)*.014,tp:Math.random()*6,vt:.01+Math.random()*.02}}
+  var N=innerWidth<640?34:60;for(var i=0;i<N;i++)fl.push(mk());
+  function draw(){
+    x.clearRect(0,0,W,H);
+    fl.forEach(function(f){
+      if(!still){f.ph+=.01;f.rot+=f.vr;f.tp+=f.vt;f.y+=f.vy;f.x+=Math.sin(f.ph)*.4*(.4+f.z)+.12;if(f.y>H+40){f.y=-40;f.x=Math.random()*W}if(f.x>W+40)f.x=-40}
+      x.globalAlpha=.5+f.z*.45;
+      if(f.dot){x.fillStyle=col;x.beginPath();x.arc(f.x,f.y,f.s*.16,0,6.3);x.fill()}
+      else{x.save();x.translate(f.x,f.y);x.rotate(f.rot);x.scale(1,.6+.4*Math.abs(Math.cos(f.tp)));x.drawImage(spr[f.t],-f.s/2,-f.s/2,f.s,f.s);x.restore()}
+    });
+    x.globalAlpha=1;requestAnimationFrame(draw)}
+  draw();
+})();
+</script>
+</body>
+</html>
